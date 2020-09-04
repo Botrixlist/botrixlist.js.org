@@ -1,7 +1,88 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+
 body{
-    background-color: #1a1a1a1a;
+    background-color: #2c2f33 !important;
+    font-family: "Poppins";
+}
+
+.navClick{
+	margin-left: 20px;
+	color: #ff2142;
+	
 }
 
 .centered{
     text-align: center;
+}
+
+.sidebar-container{
+  position: fixed;
+  width: 230px;
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  background: #23272a;
+  color: #fff;
+}
+
+.sidebar-logo{
+  padding: 10px 15px 10px 10px;
+  font-size: 20px;
+  background-color: #ff2142;
+	border-bottom: solid 5px;
+	border-color: #fff;
+}
+
+.sidebar-navigation{
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  position: relative;
+}
+
+.sidebar-navigation li{
+  text-decoration: none;
+  padding: 10px 15px 10px 10px;
+  display: block;
+  color: #fff;
+}
+
+.sidebar-navigation li a:active,
+.sidebar-navigation li a:hover,
+.sidebar-navigation li a:focus{
+  text-decoration: none;
+  outline: none;
+}
+
+
+.sidebar-navigation li::before{
+  background-color: #ff2142;
+  position: absolute;
+  content: '';
+  height: 100%;
+  left: 0;
+  top: 0;
+  -webkit-transition: width 0.2s ease-in;
+  transition: width 0.2s ease-in;
+  width: 3px;
+  z-index: -1;
+}
+
+.sidebar-navigation li:hover::before{
+  width: 100%;
+}
+
+.sidebar-navigation .header{
+  text-transform: uppercase;
+  background-color: #23272a;
+  padding: 10px 15px 10px 10px;
+}
+
+.sidebar-navigation .header::before{
+  background-color: transparent;
+}
+
+.content-container {
+  padding-left: 250px;
 }
