@@ -27,32 +27,220 @@
 </head>
 
 <body>
-  <div class='sidebar-container'>
-    <div class='sidebar-logo'>
-      <img src="https://hmp.me/dbnr" style="max-width: 100%; height: auto;" alt="Botrix Docs">
+		<div class='navbar-container'>
+      <img src="https://hmp.me/dbnr" style="max-height: 80%; margin: 10px;" alt="Botrix Docs">
     </div>
 
+  <div class='sidebar-container'>
     <ul class='sidebar-navigation'>
       <li class='header' style="margin-top: 10px">Application:</li>
+			<li>
+        <a href='#gettingStarted' class='navClick'>Getting Started</a>
+      </li>
       <li>
         <a href='#apiEndpoints' class='navClick'>Endpoints</a>
       </li>
+			<li>
+        <a href='#troubleshooting' class='navClick'>Trouble Shooting</a>
+      </li>
+			<li class='header' style="margin-top: 10px">Models:</li>
+      <li>
+        <a href='#botModel' class='navClick'>Bot Model</a>
+      </li>
+			<li>
+        <a href='#userModel' class='navClick'>User Model</a>
+      </li>
+
     </ul>
 
   </div>
 
   <div class='content-container'>
-    <div class='centered' style="padding-top: 50px"> 
-      <h1>Welcome to the Botrix Documentation</h1>
+    <div class='centered' style="padding-top: 120px"> 
+      <h1>Welcome to the Botrix Documentation Page</h1>
     </div>
-    <p style='padding-top: 20px;'>Notice <img src='https://techcarellc.com/wp-content/uploads/2018/04/icon-info.png' width="20px" height="20px"> - Before continuing please go to <a href="https://botrix.tk/developers">the Developer Portal</a> and obtain your api key.</p>
+    <p class="centered" style='padding-top: 50px;'>Notice <img src='https://techcarellc.com/wp-content/uploads/2018/04/icon-info.png' width="20px" height="20px"> - Before continuing please go to <a href="https://botrix.tk/developers">the Developer Portal</a> and obtain your api key.</p>
 
-    <h1 style='padding-top: 100px;'>Getting started</h1>
-    <p>As of 04/09/2020 our entire API is REST based.. If you want to do more reading on REST api's <a href='https://blog.tecladocode.com/learn-python-interacting-with-rest-apis-with-python/'>view here</a>. Various languages like Javascript and Python natively support connecting to REST API's</p>
+    <h1 style='padding-top: 100px;' id="gettingStarted">Getting started</h1>
+		<br><hr style="background-color: #ff2142">
+    <p>As of 04/09/2020 our entire API is REST based.. If you want to do more reading on REST api's <a href='https://blog.tecladocode.com/learn-python-interacting-with-rest-apis-with-python/'>view here</a>.
+		<br><br>
+		 Various languages like Javascript and Python natively support connecting to REST API's</p>
 
-    <h1 style='padding-top: 100px;'>API Endpoints</h1>
-    <h3 style="padding-top: 40px;">GET /api/get/bot/:id</h3>
-    <p>Get's the bot object from the id, returns the <a href="#botObject">Bot object</a></p>
+		<div>
+    	<h1 id='apiEndpoints' style='padding-top: 100px;'>API Endpoints</h1>
+			<hr style="background-color: #ff2142; margin-bottom: 30px;">
+    	<div class="card">
+				<h3 id='getBot' style="color: #738ADB;">GET <code>/api/get/bot/:id</code></h3>
+    	</div>
+			<p style="padding-bottom: 80px;">Get's the bots (provided the ID and ONLY if bot is listed) statistics, returns data from the <a href="#userModel">Bot Model</a></p>
+
+			<hr style="background-color: #ff2142; margin-bottom: 30px;">
+    	<div class="card">
+				<h3 id='getBot' style="color: #738ADB;">GET <code>/api/get/user/:id</code></h3>
+    	</div>
+    	<p style="padding-bottom: 80px;">Get's the users (provided the ID) statistics, returns data from the <a href="#userModel">User Model</a></p>
+    
+			<hr style="background-color: #ff2142; margin-bottom: 30px;">
+			<div class="card">
+				<h3 id='getBot' style="color: #738ADB;">GET <code>/api/protected/users/voted/:id</code></h3>
+    	</div>
+    	<p style="padding-bottom: 80px;">Get's if a user has voted for your bot, returns false or true depending on if they voted in the past 24 hours</p>
+
+			<hr style="background-color: #ff2142; margin-bottom: 30px;">
+		</div>
+
+		<div>
+    	<h1 id='troubleshooting' style='padding-top: 100px;'>Trouble Shooting</h1>
+			<hr style="background-color: #ff2142; margin-bottom: 30px;">
+			<p> Botrix uses a Custom Error schema which is provided via the Botrix API. If you find yourself on an error page, don’t worry just copy the link to the page and reference this docs page for explanations on the error. </p>
+    
+			<hr style="background-color: #ff2142; margin-bottom: 60px;">
+			<div class="card">
+				<h3 id='getBot' style="color: #738ADB;">ERROR | <code>/error/?e={error}</code></h3>
+    	</div>
+    	<p style="padding-bottom: 20px;">See below on  error page schema</p>
+
+			<table class="card" style="background-color: #000; padding: 40px;">
+      <tr>
+        <th scope="col">Error</th>
+        <th scope="col">Error Desc</th>
+      </tr>
+      <tr>
+        <td>e=unknown</td>
+        <td>provided ID was invalid.</td>
+      </tr>
+      <tr>
+        <td>e=verified</td>
+        <td>That bot was already found on the botlist.</td>
+      </tr>
+      <tr>
+        <td>e=unverified</td>
+        <td>That bot was already found on the botlist. Wait for verification.</td>
+      </tr>
+      <tr>
+        <td>e=long</td>
+        <td>The short description was too long.</td>
+      </tr>
+      <tr>
+        <td>e=user</td>
+        <td>Please logout and login again.</td>
+      </tr>
+      <tr>
+        <td>e=invite</td>
+        <td>Invalid bot invite link provided.</td>
+      </tr>      
+      <tr>
+        <td>e=owner</td>
+        <td>The bot is not yours to edit.</td>
+      </tr>
+      <tr>
+        <td>e=id</td>
+        <td>You can’t change the bot id.</td>
+      </tr>
+      <tr>
+        <td>e=server</td>
+        <td>You are not in the server, Please join our Server before adding any bots.</td>
+      </tr>
+      <tr>
+        <td>e=js</td>
+        <td>JS is not supported in the long description.</td>
+      </tr>
+      <tr>
+        <td>e=html</td>
+        <td>HTML is not supported in the long description.</td>
+      </tr>
+      <tr>
+        <td>e=notfound</td>
+        <td>Your bot was not found on the list.</td>
+      </tr>
+      <tr>
+        <td>e=nolegal	</td>
+        <td>Our Terms of Service and Privacy Policy are currently a work in progress, Please check back at a later date.</td>
+      </tr>                         
+    </table>
+
+			<hr style="background-color: #ff2142; margin-bottom: 30px;">
+		</div>
+
+		<table>
+      <tr>
+        <th scope="col">Field</th>
+        <th scope="col">Data type</th>
+        <th scope="col">Description</th>
+      </tr>
+      <tr>
+        <td>botTags</td>
+        <td>String Array</td>
+        <td>tags used in bot</td>
+      </tr>
+      <tr>
+        <td>state</td>
+        <td>String</td>
+        <td>verifacation state</td>
+      </tr>
+      <tr>
+        <td>owners</td>
+        <td>array</td>
+        <td>owners id</td>
+      </tr>
+      <tr>
+        <td>nsfw</td>
+        <td>bool</td>
+        <td>is nsfw</td>
+      </tr>
+      <tr>
+        <td>username</td>
+        <td>String</td>
+        <td>bot's username</td>
+      </tr>
+      <tr>
+        <td>botId</td>
+        <td>String</td>
+        <td>bot's id</td>
+      </tr>      
+      <tr>
+        <td>logo</td>
+        <td>String</td>
+        <td>avatar url for bot</td>
+      </tr>
+      <tr>
+        <td>invite</td>
+        <td>String</td>
+        <td>bot's invite</td>
+      </tr>
+      <tr>
+        <td>description</td>
+        <td>String</td>
+        <td>short description for bot</td>
+      </tr>
+      <tr>
+        <td>long</td>
+        <td>String</td>
+        <td>owners id</td>
+      </tr>
+      <tr>
+        <td>prefix</td>
+        <td>String</td>
+        <td>bot's prefix</td>
+      </tr>
+      <tr>
+        <td>addedAt</td>
+        <td>String</td>
+        <td>date added</td>
+      </tr>
+      <tr>
+        <td>support</td>
+        <td>String</td>
+        <td>support server invite</td>
+      </tr>      
+      <tr>
+        <td>website</td>
+        <td>String</td>
+        <td>bot's webiste</td>
+      </tr>                          
+    </table>
+
   </div>
 
    <!-- Bootstrap CSS CDN -->
