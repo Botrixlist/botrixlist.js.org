@@ -3,27 +3,56 @@
 
 body{
     background-color: #2c2f33 !important;
+    color: white !important;
     font-family: "Poppins";
 }
 
 .navClick{
 	margin-left: 20px;
-	color: #ff2142;
+	color: #fff;
+	font-weight: bold;
 	
+}
+
+.card {
+  box-shadow: 5px 14px 14px 0 rgb(0, 0, 0, 0.6);
+	margin: 30px;
+	margin-right: 50px;
+	padding: 10px;
+  transition: 0.3s;
+  border-radius: 5px; /* 5px rounded corners */
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
 .centered{
     text-align: center;
 }
 
+.navbar-container{
+  position: fixed;
+  width: 100%;
+	z-index: 999;
+  height: 100px;
+  left: 0;
+  overflow: hidden;
+  background: #ff2142;
+  color: #fff;
+	border-bottom: solid 5px;
+}
+
 .sidebar-container{
   position: fixed;
-  width: 230px;
+  width: 190px;
   height: 100%;
   left: 0;
+	margin-top: 100px;
   overflow: hidden;
   background: #23272a;
   color: #fff;
+	border-right: solid 5px;
 }
 
 .sidebar-logo{
@@ -53,6 +82,9 @@ body{
 .sidebar-navigation li a:focus{
   text-decoration: none;
   outline: none;
+  margin-left: 20px;
+	color: #fff;
+	font-weight: bold;
 }
 
 
@@ -85,4 +117,20 @@ body{
 
 .content-container {
   padding-left: 250px;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 50%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: transparent;
 }
