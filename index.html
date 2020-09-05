@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html style="scroll-behavior: smooth;">
 
 <head>
 	<link rel="stylesheet" type="text/css" href="index.css">
@@ -26,9 +26,17 @@
 	
 </head>
 
+
 <body>
 		<div class='navbar-container'>
-      <img src="https://hmp.me/dbnr" style="max-height: 80%; margin: 10px;" alt="Botrix Docs">
+      <img src="https://hmp.me/dbnr" style="max-height: 80%; margin: 10px; float: left;" alt="Botrix Docs">
+			<div style="display: block;">
+				<button class="btn" style="font-weight: bold; border: solid 3px white;"><a href="https://discord.gg/GhBR6h5" style="color: white;">DISCORD</button>
+
+				<button class="btn" style="font-weight: bold; border: solid 3px white;"><a href="https://www.botrix.tk/" style="color: white;">MAIN</button>
+
+				<button class="btn" style="font-weight: bold; border: solid 3px white;"><a href="https://discord.gg/GhBR6h5" style="color: white;">GIT SOURCE</button>
+			</div>
     </div>
 
   <div class='sidebar-container'>
@@ -45,12 +53,8 @@
       </li>
 			<li class='header' style="margin-top: 10px">Models:</li>
       <li>
-        <a href='#botModel' class='navClick'>Bot Model</a>
+        <a href='#botmodel' class='navClick'>Bot Model</a>
       </li>
-			<li>
-        <a href='#userModel' class='navClick'>User Model</a>
-      </li>
-
     </ul>
 
   </div>
@@ -62,10 +66,22 @@
     <p class="centered" style='padding-top: 50px;'>Notice <img src='https://techcarellc.com/wp-content/uploads/2018/04/icon-info.png' width="20px" height="20px"> - Before continuing please go to <a href="https://botrix.tk/developers">the Developer Portal</a> and obtain your api key.</p>
 
     <h1 style='padding-top: 100px;' id="gettingStarted">Getting started</h1>
+		<p> Like most Big Name Bot Lists here at Botrix we offer Custom API for Developers to Interact with our service. Note that this API is still a major WIP and is due to change with upcoming updates!</p>
 		<br><hr style="background-color: #ff2142">
     <p>As of 04/09/2020 our entire API is REST based.. If you want to do more reading on REST api's <a href='https://blog.tecladocode.com/learn-python-interacting-with-rest-apis-with-python/'>view here</a>.
 		<br><br>
-		 Various languages like Javascript and Python natively support connecting to REST API's</p>
+		 Various languages like Javascript and Python natively support connecting to REST API's</p><br>
+
+		 <h3> Features </h3>
+		 <ul>
+  		<li>Feat 1</li>
+  		<li>Feat 2</li>
+  		<li>Feat 3</li>
+		</ul>
+		<br><br><br>
+		<div class="card">
+				<h3 style="color: #738ADB;">Base URL | <code>https://botrix.tk/api</code></h3>
+    	</div>
 
 		<div>
     	<h1 id='apiEndpoints' style='padding-top: 100px;'>API Endpoints</h1>
@@ -73,7 +89,7 @@
     	<div class="card">
 				<h3 id='getBot' style="color: #738ADB;">GET <code>/api/get/bot/:id</code></h3>
     	</div>
-			<p style="padding-bottom: 80px;">Get's the bots (provided the ID and ONLY if bot is listed) statistics, returns data from the <a href="#userModel">Bot Model</a></p>
+			<p style="padding-bottom: 80px;">Get's the bots (provided the ID and ONLY if bot is listed) statistics, returns data from the <a href="#botmodel">Bot Model</a></p>
 
 			<hr style="background-color: #ff2142; margin-bottom: 30px;">
     	<div class="card">
@@ -163,6 +179,7 @@
 			<hr style="background-color: #ff2142; margin-bottom: 30px;">
 		</div>
 
+    <h1 id='botmodel' sytle="padding-top: 20px;">Bot Model</h1>
 		<table>
       <tr>
         <th scope="col">Field</th>
