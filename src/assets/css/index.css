@@ -6,144 +6,114 @@ body{
     background-color: #2c2f33 !important;
     color: white !important;
     font-family: "Poppins";
+    margin: 0;
 }
-
-.navClick{
-	margin-left: 20px;
-	color: #fff;
-	font-weight: bold;
-}
-
-.btn{
-  width:20%;
-	margin: 28px;
-  height:10%;
-	background-color:transparent;
-	padding: 15px;
-}
-
-.btn:hover{
-	box-shadow: 0px 0px 20px 0px black;
-}
-
-.card {
-  box-shadow: 5px 14px 14px 0 rgb(0, 0, 0, 0.6);
-	margin: 30px;
-	margin-right: 50px;
-	padding: 10px;
-  transition: 0.3s;
-  border-radius: 5px; /* 5px rounded corners */
-}
-
-.card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
-
-.centered{
-    text-align: center;
-}
-
-.navbar-container{
-  position: fixed;
-  width: 100%;
-	z-index: 999;
-  height: 100px;
-  left: 0;
-  overflow: hidden;
-  background: #ff2142;
-  color: #fff;
-	border-bottom: solid 5px;
-}
-
-.sidebar-container{
-  position: fixed;
-  width: 190px;
-  height: 100%;
-  left: 0;
-	margin-top: 100px;
-  overflow: hidden;
-  background: #23272a;
-  color: #fff;
-	border-right: solid 5px;
-}
-
-.sidebar-logo{
-  padding: 10px 15px 10px 10px;
-  font-size: 20px;
-  background-color: #ff2142;
-	border-bottom: solid 5px;
-	border-color: #fff;
-}
-
-.sidebar-navigation{
-  padding: 0;
-  margin: 0;
+ul {
   list-style-type: none;
-  position: relative;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
-.sidebar-navigation li{
-  background-color: transparent;
-  position: relative;
+li {
+  float: left;
+}
+
+li a, .dropbtn{
   display: inline-block;
-  width: 100%;
-  line-height: 40px;
-}
-
-.sidebar-navigation li a:active,
-.sidebar-navigation li a:hover,
-.sidebar-navigation li a:focus{
+  color: white;
+  text-align: center;
+  padding: 20px 16px;
+  transition: all 0.5s ease;
   text-decoration: none;
-  outline: none;
-  margin-left: 20px;
-	color: #fff;
-	font-weight: bold;
 }
 
+li img{
+  padding: 18px 10px;
+}
 
-.sidebar-navigation li::before{
-  background-color: #ff2142;
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: #fca311;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
   position: absolute;
-  content: '';
-  height: 100%;
-  left: 0;
-  top: 0;
-  -webkit-transition: width 0.2s ease-in;
-  transition: width 0.2s ease-in;
-  width: 3px;
-  z-index: -1;
+  background-color: #f9f9f9;
+  border-radius: 2px;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
 }
 
-.sidebar-navigation li:hover::before{
-  width: 100%;
-}
-
-.sidebar-navigation .header{
-  text-transform: uppercase;
-  background-color: #23272a;
-  padding: 10px 15px 10px 10px;
-}
-
-.sidebar-navigation .header::before{
-  background-color: transparent;
-}
-
-.content-container {
-  padding-left: 250px;
-}
-
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 50%;
-}
-
-td, th {
-  border: 1px solid #dddddd;
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
   text-align: left;
-  padding: 8px;
 }
 
-tr:nth-child(even) {
-  background-color: transparent;
+.dropdown-content a:hover {background-color: #00000028;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the link color to #111 (black) on hover */
+.nav li a:hover {
+  background-color: #fca311;
+}
+
+.code-block {
+  background-color: white;
+  color: red;
+  padding: 10px;
+  border-radius: 6px;
+  box-shadow: 2px 2px 20px 1px black;
+  margin: 0 auto;
+  width: 80%;
+  text-align: center;
+}
+
+.feature-card{
+  background-color: #fca311;
+  text-align: center;
+  margin: 0 auto;
+  width: 60%;
+  padding: 20px;
+  border-radius: 18px;
+  box-shadow: 0px 0px 40px 0px black;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.button {
+  background-color: white;
+  color: black;
+  border-radius: 24px;
+  border: none;
+  padding: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.button:hover {
+  box-shadow: 0px 10px 60px 0px black;
+  -o-transition-duration: 0.4s;
+  -moz-transition-duration: 0.4s;
+  -webkit-animation-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+
+@media screen and (min-width: 1000px) {
+  .feature-card {
+    width: 60%;
+  }
 }

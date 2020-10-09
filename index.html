@@ -1,281 +1,54 @@
 <!DOCTYPE html>
 <html style="scroll-behavior: smooth;">
+  <head>
+    <link rel="icon" href="/public/assets/synapse.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botrix API: Docs</title>
+    <link rel='stylesheet' href='src/assets/css/index.css'>
 
-<head>
-	<link rel="stylesheet" type="text/css" href="index.css">
-
-	<meta name="title" content="Botrix | Documentation">
-	<meta name="description" content="This website will provide developers with a thorough documentation insite of our API's and Services.">
+    <meta name="title" content="Synapse">
+	<meta name="description" content="Affordable cloud hosting solutions for everyone.">
 
 	<!-- Open Graph / Facebook -->
 	<meta property="og:type" content="website">
-	<meta property="og:url" content="https://docs.botrix.tk/">
-	<meta property="og:title" content="Botrix | Documentation">
-	<meta property="og:description" content="This website will provide developers with a thorough documentation insite of our API's and Services.">
-	<meta property="og:image" content="https://hmp.me/dbnr">
+	<meta property="og:url" content="https://www.synapsecloud.cc/">
+	<meta property="og:title" content="Synapse: Affordable Cloud Hosting">
+	<meta property="og:description" content="Affordable cloud hosting solutions for everyone.">
+	<meta property="og:image" content="https://i.imgur.com/LBSKSj3.png">
 
 	<!-- Twitter -->
 	<meta property="twitter:card" content="summary_large_image">
-	<meta property="twitter:url" content="https://docs.botrix.tk/">
-	<meta property="twitter:title" content="Botrix | Documentation">
-	<meta property="twitter:description" content="This website will provide developers with a thorough documentation insite of our API's and Services.">
-	<meta property="twitter:image" content="https://hmp.me/dbnr">
+	<meta property="twitter:url" content="https://www.synapsecloud.cc/">
+	<meta property="twitter:title" content="Synapse: Affordable Cloud Hosting">
+	<meta property="twitter:description" content="Affordable cloud hosting solutions for everyone.">
+	<meta property="twitter:image" content="https://i.imgur.com/LBSKSj3.png">
 	<meta content="#FF2142" name="theme-color">
-
-	<link rel="stylesheet" type="text/css" href="./src/assets/css/index.css">
-	
-</head>
-
-
-<body>
-		<div class='navbar-container'>
-      <img src="https://hmp.me/dbnr" style="max-height: 80%; margin: 10px; float: left;" alt="Botrix Docs">
-			<div style="display: block;">
-				<button class="btn" style="font-weight: bold; border: solid 3px white;"><a href="https://discord.gg/GhBR6h5" style="color: white;">DISCORD</button>
-
-				<button class="btn" style="font-weight: bold; border: solid 3px white;"><a href="https://www.botrix.tk/" style="color: white;">MAIN</button>
-
-				<button class="btn" style="font-weight: bold; border: solid 3px white;"><a href="https://discord.gg/GhBR6h5" style="color: white;">GIT SOURCE</button>
-			</div>
-    </div>
-
-  <div class='sidebar-container'>
-    <ul class='sidebar-navigation'>
-      <li class='header' style="margin-top: 10px">Application:</li>
-			<li>
-        <a href='#gettingStarted' class='navClick'>Getting Started</a>
-      </li>
-      <li>
-        <a href='#apiEndpoints' class='navClick'>Endpoints</a>
-      </li>
-			<li>
-        <a href='#troubleshooting' class='navClick'>Trouble Shooting</a>
-      </li>
-			<li class='header' style="margin-top: 10px">Models:</li>
-      <li>
-        <a href='#botmodel' class='navClick'>Bot Model</a>
-      </li>
+  </head>
+  <body>
+    <ul id='nav'>
+      <li><img src='src/assets/img/2ce5db2301301653c11bf7e2d48fe50f.png' height='30px'></li>
+      <li><a href="#home">API</a></li>
+      <li><a href="#news">Webhooks</a></li>
+      <li><a href="#">Endpoints</a></li>
     </ul>
 
-  </div>
-
-  <div class='content-container'>
-    <div class='centered' style="padding-top: 120px"> 
-      <h1>Welcome to the Botrix Documentation Page</h1>
+    <div class="main-content">
+      <h1>Welcome</h1>
+      <div class="feature-card">
+        <h2>Botrix API</h2>
+      <h3>Botrix has its own API! It is freely available to download using:</h3>
+      <p class="code-block"><code>npm install botrix-npm</code></p>
+      <h3>Check the docs for more information on how to use the API.</h3>
+      <a href="#"><button class="button">API Documentation</button></a>
+      </div>
+      <div class="feature-card">
+        <h2>Webhooks</h2>
+        <h3>Want to get a message every time someone votes for your bot? Now you can using webhook URL's like the one below:</h3>
+        <p class="code-block"><code>https://discordapp.com/api/webhooks/[guild id]/[token]</code></p>
+        <h3>Check our article on how to use this new feature.</h3>
+        <a href="#"><button class="button">Webhooks: Guide</button></a>
+        </div>
     </div>
-    <p class="centered" style='padding-top: 50px;'>Notice <img src='https://techcarellc.com/wp-content/uploads/2018/04/icon-info.png' width="20px" height="20px"> - Before continuing please go to <a href="https://botrix.tk/developers">the Developer Portal</a> and obtain your api key.</p>
-
-    <h1 style='padding-top: 100px;' id="gettingStarted">Getting started</h1>
-		<p> Like most Big Name Bot Lists here at Botrix we offer Custom API for Developers to Interact with our service. Note that this API is still a major WIP and is due to change with upcoming updates!</p>
-		<br><hr style="background-color: #ff2142">
-    <p>As of 04/09/2020 our entire API is REST based.. If you want to do more reading on REST api's <a href='https://blog.tecladocode.com/learn-python-interacting-with-rest-apis-with-python/'>view here</a>.
-		<br><br>
-		 Various languages like Javascript and Python natively support connecting to REST API's</p><br>
-
-		 <h3> Features </h3>
-		 <ul>
-  		<li>Feat 1</li>
-  		<li>Feat 2</li>
-  		<li>Feat 3</li>
-		</ul>
-		<br><br><br>
-		<div class="card">
-				<h3 style="color: #738ADB;">Base URL | <code>https://botrix.tk/api</code></h3>
-    	</div>
-
-		<div>
-    	<h1 id='apiEndpoints' style='padding-top: 100px;'>API Endpoints</h1>
-			<hr style="background-color: #ff2142; margin-bottom: 30px;">
-    	<div class="card">
-				<h3 id='getBot' style="color: #738ADB;">GET <code>/api/get/bot/:id</code></h3>
-    	</div>
-			<p style="padding-bottom: 80px;">Get's the bots (provided the ID and ONLY if bot is listed) statistics, returns data from the <a href="#botmodel">Bot Model</a></p>
-
-			<hr style="background-color: #ff2142; margin-bottom: 30px;">
-    	<div class="card">
-				<h3 id='getBot' style="color: #738ADB;">GET <code>/api/get/user/:id</code></h3>
-    	</div>
-    	<p style="padding-bottom: 80px;">Get's the users (provided the ID) statistics, returns data from the <a href="#userModel">User Model</a></p>
-    
-			<hr style="background-color: #ff2142; margin-bottom: 30px;">
-			<div class="card">
-				<h3 id='getBot' style="color: #738ADB;">GET <code>/api/protected/users/voted/:id</code></h3>
-    	</div>
-    	<p style="padding-bottom: 80px;">Get's if a user has voted for your bot, returns false or true depending on if they voted in the past 24 hours</p>
-
-			<hr style="background-color: #ff2142; margin-bottom: 30px;">
-		</div>
-
-		<div>
-    	<h1 id='troubleshooting' style='padding-top: 100px;'>Trouble Shooting</h1>
-			<hr style="background-color: #ff2142; margin-bottom: 30px;">
-			<p> Botrix uses a Custom Error schema which is provided via the Botrix API. If you find yourself on an error page, don’t worry just copy the link to the page and reference this docs page for explanations on the error. </p>
-    
-			<hr style="background-color: #ff2142; margin-bottom: 60px;">
-			<div class="card">
-				<h3 id='getBot' style="color: #738ADB;">ERROR | <code>/error/?e={error}</code></h3>
-    	</div>
-    	<p style="padding-bottom: 20px;">See below on  error page schema</p>
-
-			<table class="card" style="background-color: #000; padding: 40px;">
-      <tr>
-        <th scope="col">Error</th>
-        <th scope="col">Error Desc</th>
-      </tr>
-      <tr>
-        <td>e=unknown</td>
-        <td>provided ID was invalid.</td>
-      </tr>
-      <tr>
-        <td>e=verified</td>
-        <td>That bot was already found on the botlist.</td>
-      </tr>
-      <tr>
-        <td>e=unverified</td>
-        <td>That bot was already found on the botlist. Wait for verification.</td>
-      </tr>
-      <tr>
-        <td>e=long</td>
-        <td>The short description was too long.</td>
-      </tr>
-      <tr>
-        <td>e=user</td>
-        <td>Please logout and login again.</td>
-      </tr>
-      <tr>
-        <td>e=invite</td>
-        <td>Invalid bot invite link provided.</td>
-      </tr>      
-      <tr>
-        <td>e=owner</td>
-        <td>The bot is not yours to edit.</td>
-      </tr>
-      <tr>
-        <td>e=id</td>
-        <td>You can’t change the bot id.</td>
-      </tr>
-      <tr>
-        <td>e=server</td>
-        <td>You are not in the server, Please join our Server before adding any bots.</td>
-      </tr>
-      <tr>
-        <td>e=js</td>
-        <td>JS is not supported in the long description.</td>
-      </tr>
-      <tr>
-        <td>e=html</td>
-        <td>HTML is not supported in the long description.</td>
-      </tr>
-      <tr>
-        <td>e=notfound</td>
-        <td>Your bot was not found on the list.</td>
-      </tr>
-      <tr>
-        <td>e=nolegal	</td>
-        <td>Our Terms of Service and Privacy Policy are currently a work in progress, Please check back at a later date.</td>
-      </tr>                         
-    </table>
-
-			<hr style="background-color: #ff2142; margin-bottom: 30px;">
-		</div>
-
-    <h1 id='botmodel' sytle="padding-top: 20px;">Bot Model</h1>
-		<table>
-      <tr>
-        <th scope="col">Field</th>
-        <th scope="col">Data type</th>
-        <th scope="col">Description</th>
-      </tr>
-      <tr>
-        <td>botTags</td>
-        <td>String Array</td>
-        <td>tags used in bot</td>
-      </tr>
-      <tr>
-        <td>state</td>
-        <td>String</td>
-        <td>verifacation state</td>
-      </tr>
-      <tr>
-        <td>owners</td>
-        <td>array</td>
-        <td>owners id</td>
-      </tr>
-      <tr>
-        <td>nsfw</td>
-        <td>bool</td>
-        <td>is nsfw</td>
-      </tr>
-      <tr>
-        <td>username</td>
-        <td>String</td>
-        <td>bot's username</td>
-      </tr>
-      <tr>
-        <td>botId</td>
-        <td>String</td>
-        <td>bot's id</td>
-      </tr>      
-      <tr>
-        <td>logo</td>
-        <td>String</td>
-        <td>avatar url for bot</td>
-      </tr>
-      <tr>
-        <td>invite</td>
-        <td>String</td>
-        <td>bot's invite</td>
-      </tr>
-      <tr>
-        <td>description</td>
-        <td>String</td>
-        <td>short description for bot</td>
-      </tr>
-      <tr>
-        <td>long</td>
-        <td>String</td>
-        <td>owners id</td>
-      </tr>
-      <tr>
-        <td>prefix</td>
-        <td>String</td>
-        <td>bot's prefix</td>
-      </tr>
-      <tr>
-        <td>addedAt</td>
-        <td>String</td>
-        <td>date added</td>
-      </tr>
-      <tr>
-        <td>support</td>
-        <td>String</td>
-        <td>support server invite</td>
-      </tr>      
-      <tr>
-        <td>website</td>
-        <td>String</td>
-        <td>bot's webiste</td>
-      </tr>                          
-    </table>
-
-  </div>
-
-   <!-- Bootstrap CSS CDN -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-    <!-- Our Custom CSS -->
-    <link rel="stylesheet" href="style.css">
-
-    <!-- Font Awesome JS -->
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
-      <!-- jQuery CDN - Slim version (=without AJAX) -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <!-- Popper.JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-    <!-- Bootstrap JS -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-
-  
-    </body>
-
+  </body>
 </html>
