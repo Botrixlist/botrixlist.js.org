@@ -111,9 +111,3 @@ li.dropdown {
   -webkit-animation-duration: 0.4s;
   transition-duration: 0.4s;
 }
-
-@media screen and (min-width: 1000px) {
-  .feature-card {
-    width: 60%;
-  }
-}
